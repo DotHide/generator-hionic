@@ -1,11 +1,14 @@
 'use strict';
-var yeoman = require('yeoman-generator');
+
+var fs = require('fs');
+var path = require('path');
+var generators = require('yeoman-generator');
+var mkdirp = require('mkdirp');
+var _ = require('lodash');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var _ = require('lodash');
-var fs = require('fs');
 
-module.exports = yeoman.Base.extend({
+module.exports = generators.Base.extend({
   constructor: function() {
     generators.Base.apply(this, arguments);
     this.log(yosay('Welcome to ' + chalk.red('generator-hionic') + '!'));
@@ -30,8 +33,10 @@ module.exports = yeoman.Base.extend({
 
   configuring: {
     configVars: function() {
+      this.log(chalk.yellow('Starting configuring ..'));
       this.appName = this.appName || path.basename(process.cwd());
-      this.appName = _.camelCase(this.appName).capitalize(this.appName);
+      this.appName = _.camelCase(this.appName);
+      this.log(chalk.yellow(this.appName + ' configured!'));
       this.appModuleName = this.options.appModuleName || _.lowerCase(this.appName);
       this.appId = this.options.appId || 'com.ionic.' + this.appName;
       this.appPath = 'app';
@@ -51,29 +56,29 @@ module.exports = yeoman.Base.extend({
     },
 
     pkgFiles: function() {
-      this.template('_bowerrc', 'bowerrc');
-      this.template('_bower.json', 'bower.json');
-      this.template('_package.json', 'package.json');
-      this.template('_Gruntfile.js', 'Gruntfile.js');
+      this.template('packages/_bowerrc', '.bowerrc');
+      this.template('packages/_bower.json', 'bower.json');
+      this.template('packages/_package.json', 'package.json');
+      this.template('packages/_Gruntfile.js', 'Gruntfile.js');
     }
   },
 
   writing: {
     installIonic: function() {
       this.log(chalk.yellow('Installing ionic blank template. Pls wait ...'));
-      var done = this.async();
-      var callback = function(error, remote) {
-        if (error) {
-          done(error);
-        }
 
-        remote.directory('.', 'app');
-        this.starterCache = remote.cachePath;
+      this.directory('app', 'app', true);
+      mkdirp.sync(path.join(this.destinationPath(), 'app/images'));
+      mkdirp.sync(path.join(this.destinationPath(), 'app/views'));
 
-        done();
-      }.bind(this);
+      this.fs.copyTpl(
+        this.templatePath('app/index.html'),
+        this.destinationPath('app/index.html'), { "appName": this.appName }
+      );
+    },
 
-      this.remote('driftyco', 'ionic-starter-blank', 'master', callback, true);
+    packages: function() {
+      this.installDependencies();
     }
   }
 });

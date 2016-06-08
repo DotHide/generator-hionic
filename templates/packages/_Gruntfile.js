@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     },
 
     server: {
-      ip: '192.168.1.4',
+      ip: '0.0.0.0',
       port: '3000'
     },
 
