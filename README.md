@@ -1,4 +1,7 @@
-# generator-hionic [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# Generator for Ionic framework 
+
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+
 > Create an Ionic project with Grunt using Yeoman
 
 ## Installation
@@ -10,10 +13,40 @@ npm install -g yo
 npm install -g generator-hionic
 ```
 
-Then generate your new project:
+1) Choose a directory and `cd` into it
+
+```
+$ mkdir <my-app-name> && cd $_
+```
+
+2) Run `yo hionic` command and you can also use some options
 
 ```bash
-yo hionic
+yo hionic [appName] --appId "com.company.myapp" --appModuleName "myapp"
+```
+
+3) When finish yo installation run `grunt serve` to start app.
+
+## Structure
+Project structure is following:
+
+```
+├── app/
+│   ├── images/             - Project images
+│   ├── lib/                - Libraries managed by Bower
+│   ├── scripts/            - Custom AngularJS Scripts
+│   ├── scss/               - Sass Stylesheets
+│   ├── views/              - HTML views
+│   ├── index.html          - Main Ionic app entry point
+├── hooks/                  - Cordova lifecycle hooks
+├── test/                   - Unit tests
+│   ├── spec/
+├── .gitignore              - Git ignore file
+├── .bowerrc                - Bower rc file
+├── bower.json              - Lists front-end dependencies
+├── Gruntfile.js            - Configuration of all Grunt tasks
+├── package.json            - Dev dependencies and required Cordova plugins
+├── config.xml              - Global Cordova configuration
 ```
 
 ## Getting To Know Yeoman
