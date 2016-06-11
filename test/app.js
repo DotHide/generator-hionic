@@ -21,6 +21,7 @@ describe('generator-hionic:app', function() {
         'Gruntfile.js',
         'package.json'
       ]);
+      done();
     });
 
     it('App folder', function() {
@@ -29,10 +30,11 @@ describe('generator-hionic:app', function() {
         'app/scripts/app.module.js',
         'app/scss/styles.scss'
       ]);
+      done();
     });
   });
 
-  describe('--appName', function() {
+  describe('option: --appName', function() {
     beforeEach(function(done) {
       this.hionic
         .withArguments(['appName'])
@@ -49,6 +51,7 @@ describe('generator-hionic:app', function() {
         'app/index.html',
         /ng-app="appName"/
       );
+      done();
     });
   });
 
