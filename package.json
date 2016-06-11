@@ -1,8 +1,8 @@
 {
   "name": "generator-hionic",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Create an Ionic project with Grunt using Yeoman",
-  "homepage": "",
+  "homepage": "https://github.com/DotHide/generator-hionic",
   "author": {
     "name": "Martin_nett",
     "email": "dothide@gmail.com",
@@ -23,6 +23,8 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
+    "commitizen": "2.8.2",
+    "cz-conventional-changelog": "1.1.6",
     "eslint": "^2.1.0",
     "eslint-config-xo-space": "^0.12.0",
     "gulp": "^3.9.0",
@@ -34,6 +36,8 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
+    "semantic-release": "^4.3.5",
+    "semantic-release-cli": "1.4.1",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
@@ -43,14 +47,24 @@
       "mocha": true
     }
   },
-  "repository": "DotHide/generator-hionic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DotHide/generator-hionic.git"
+  },
   "scripts": {
+    "commit": "git-cz",
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "engines": {
     "node": ">=0.10.0",
     "npm": ">=1.2.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
 }
