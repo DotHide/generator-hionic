@@ -60,6 +60,7 @@ module.exports = generators.Base.extend({
       this.template('packages/_bower.json', 'bower.json');
       this.template('packages/_package.json', 'package.json');
       this.template('packages/_Gruntfile.js', 'Gruntfile.js');
+      this.template('packages/_config.xml', 'config.xml');
     }
   },
 
@@ -75,6 +76,10 @@ module.exports = generators.Base.extend({
         this.templatePath('app/index.html'),
         this.destinationPath('app/index.html'), { "appName": this.appName }
       );
+    },
+
+    hooks: function() {
+      this.directory('hooks', 'hooks', true);
     },
 
     packages: function() {
