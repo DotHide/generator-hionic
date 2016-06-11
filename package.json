@@ -37,7 +37,6 @@
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
     "semantic-release": "^4.3.5",
-    "semantic-release-cli": "1.4.1",
     "yeoman-assert": "^2.0.0",
     "yeoman-test": "^1.0.0"
   },
