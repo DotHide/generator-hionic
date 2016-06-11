@@ -6,9 +6,7 @@ var helpers = require('yeoman-test');
 describe('generator-hionic:app', function() {
   before(function(done) {
     helpers.run(path.join(__dirname, '../app'))
-      .on('end', function() {
-        done();
-      });
+      .on('end', done);
   });
 
   it('Package files', function() {
