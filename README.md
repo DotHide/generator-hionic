@@ -1,6 +1,6 @@
 # Generator for Ionic framework 
 
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+[![NPM version][npm-image]][https://www.npmjs.com/package/generator-hionic] [![Build Status][travis-image]][https://travis-ci.org/DotHide/generator-hionic]
 
 > Create an Ionic project with Grunt using Yeoman
 
