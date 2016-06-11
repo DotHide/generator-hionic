@@ -45,7 +45,7 @@ module.exports = generators.Base.extend({
     configEnv: function() {
       var invisibleFiles = ['Thumbs.db', '.DS_Store'];
       _.forEach(invisibleFiles, function(filename) {
-        var file = path.join(process.cwd(), filename)
+        var file = path.join(process.cwd(), filename);
         if (fs.existsSync(file)) {
           fs.unlinkSync(file);
         }
