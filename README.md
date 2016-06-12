@@ -1,6 +1,6 @@
 # Generator for Ionic framework 
 
-[![npm](https://img.shields.io/npm/v/generator-hionic.svg?maxAge=2592000)](https://www.npmjs.com/package/generator-hionic) [![Travis](https://img.shields.io/travis/DotHide/generator-hionic.svg?maxAge=2592000)](https://travis-ci.org/DotHide/generator-hionic) [![npm](https://img.shields.io/npm/l/generator-hionic.svg?style=flat-square)](https://www.npmjs.com/package/generator-hionic)
+[![npm](https://img.shields.io/npm/v/generator-hionic.svg?maxAge=2592000)](https://www.npmjs.com/package/generator-hionic) [![Travis](https://img.shields.io/travis/DotHide/generator-hionic.svg?maxAge=2592000)](https://travis-ci.org/DotHide/generator-hionic) [![npm](https://img.shields.io/npm/l/generator-hionic.svg?style=flat-square)](https://www.npmjs.com/package/generator-hionic) [![Coverage Status](https://coveralls.io/repos/github/DotHide/generator-hionic/badge.svg?branch=master)](https://coveralls.io/github/DotHide/generator-hionic?branch=master)
 
 > Create an Ionic project with Grunt using Yeoman
 
