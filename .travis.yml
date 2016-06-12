@@ -17,4 +17,5 @@ after_success:
   - npm run semantic-release
 branches:
   except:
+    - "without-package"
     - "/^v\\d+\\.\\d+\\.\\d+$/"
