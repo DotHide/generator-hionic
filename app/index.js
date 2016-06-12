@@ -83,7 +83,7 @@ module.exports = generators.Base.extend({
     },
 
     packages: function() {
-      this.installDependencies();
+      // this.installDependencies();
     }
   }
 });
