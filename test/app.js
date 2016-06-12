@@ -29,6 +29,11 @@ describe('generator-hionic:app', function() {
         'app/scripts/app.module.js',
         'app/scss/styles.scss'
       ]);
+
+      assert.noFile([
+        'Thumbs.db',
+        '.DS_Store'
+      ]);
     });
   });
 

@@ -56,10 +56,6 @@
     "test": "gulp",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "engines": {
-    "node": ">=0.10.0",
-    "npm": ">=1.2.10"
-  },
   "license": "MIT",
   "config": {
     "commitizen": {
