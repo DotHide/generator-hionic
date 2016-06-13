@@ -62,13 +62,3 @@ Project structure is following:
 ## License
 
 MIT © [Martin_nett](https://github.com/DotHide)
-
-
-[npm-image]: https://badge.fury.io/js/generator-hionic.svg
-[npm-url]: https://npmjs.org/package/generator-hionic
-[travis-image]: https://travis-ci.org/DotHide/generator-hionic.svg?branch=master
-[travis-url]: https://travis-ci.org/DotHide/generator-hionic
-[daviddm-image]: https://david-dm.org/DotHide/generator-hionic.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/DotHide/generator-hionic
-[coveralls-image]: https://coveralls.io/repos/DotHide/generator-hionic/badge.svg
-[coveralls-url]: https://coveralls.io/r/DotHide/generator-hionic
